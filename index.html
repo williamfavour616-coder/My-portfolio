@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Williams Favour Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0a0f3c, #3a0ca3);
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #a29bfe;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hero {
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background: #7209b7;
+      color: white;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #560bad;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Williams Favour</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Hello, I'm Williams 👋</h2>
+    <p>A Creative Developer & Designer</p>
+    <button class="btn" onclick="scrollToSection('projects')">View My Work</button>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Williams Favour, passionate about web development and creating beautiful user experiences.
+      I love building modern, responsive websites using HTML, CSS, and JavaScript.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Project 1</h3>
+        <p>A responsive website design.</p>
+      </div>
+
+      <div class="card">
+        <h3>Project 2</h3>
+        <p>A JavaScript interactive app.</p>
+      </div>
+
+      <div class="card">
+        <h3>Project 3</h3>
+        <p>A creative UI/UX design project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: williams@example.com</p>
+    <button class="btn" onclick="showMessage()">Say Hello</button>
+  </section>
+
+  <footer>
+    <p>© 2026 Williams Favour. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+
+    function showMessage() {
+      alert("Thanks for reaching out, Williams will contact you soon!");
+    }
+  </script>
+
+</body>
+</html>
